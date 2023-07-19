@@ -4,6 +4,7 @@ import reportWebVitals from "./reportWebVitals";
 // components
 import { NoteProvider } from "./components/NoteProvider";
 import NoteList from "./components/NoteList";
+import NoteForm from "./components/NoteForm";
 // style
 import "./index.css";
 
@@ -11,6 +12,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <NoteProvider>
+      <NoteForm />
       <NoteList />
     </NoteProvider>
   </React.StrictMode>

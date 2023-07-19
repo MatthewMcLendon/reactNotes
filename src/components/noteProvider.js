@@ -17,7 +17,19 @@ export function NoteProvider(props) {
       });
   };
 
+  const addNote = (Note) => {
+    return fetch("http://localhost:8088/notes", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(Note),
+    }).then(getNotes);
+  };
+
   return (
-    <NoteContext.Provider value={notes}>{props.children}</NoteContext.Provider>
+    <NoteContext.Provider value={{ notes, addNote }}>
+      {props.children}
+    </NoteContext.Provider>
   );
 }
