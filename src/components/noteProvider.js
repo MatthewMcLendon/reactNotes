@@ -27,8 +27,14 @@ export function NoteProvider(props) {
     }).then(getNotes);
   };
 
+  const deleteNote = (id) => {
+    return fetch(`http://localhost:8088/notes/${id}`, {
+      method: "DELETE",
+    }).then(getNotes);
+  };
+
   return (
-    <NoteContext.Provider value={{ notes, addNote }}>
+    <NoteContext.Provider value={{ notes, addNote, deleteNote }}>
       {props.children}
     </NoteContext.Provider>
   );
