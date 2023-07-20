@@ -13,9 +13,10 @@ export default function NoteForm() {
   const submitHandler = (event) => {
     event.preventDefault();
 
-    if (selectedNote) {
+    if (selectedNote && selectedNote.id !== "default") {
       selectedNote.text = document.querySelector("#note-form-text").value;
-      updateNote(selectedNote).then(formReset);
+      updateNote(selectedNote);
+      setSelectedNote({ text: "", id: "default" });
     } else {
       const newNote = {
         text: document.querySelector("#note-form-text").value,
@@ -51,7 +52,7 @@ export default function NoteForm() {
   return (
     <form onSubmit={submitHandler}>
       <label htmlFor="note-form-text">Note: </label>
-      <input type="text" id="note-form-text" />
+      <input type="text" id="note-form-text" required />
       <input type="hidden" id="id" />
       {buttons}
     </form>
