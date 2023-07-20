@@ -4,7 +4,7 @@ import { NoteContext } from "./NoteProvider";
 export default function NoteForm() {
   const { addNote, updateNote, selectedNote, setSelectedNote } =
     useContext(NoteContext);
-  let buttons = <button id="note-form-submit">Submit</button>;
+  let buttons;
 
   useEffect(() => {
     document.querySelector("#note-form-text").value = selectedNote.text;
@@ -15,8 +15,7 @@ export default function NoteForm() {
 
     if (selectedNote && selectedNote.id !== "default") {
       selectedNote.text = document.querySelector("#note-form-text").value;
-      updateNote(selectedNote);
-      setSelectedNote({ text: "", id: "default" });
+      updateNote(selectedNote).then(formReset);
     } else {
       const newNote = {
         text: document.querySelector("#note-form-text").value,
@@ -29,11 +28,11 @@ export default function NoteForm() {
   const cancelHandler = (event) => {
     event.preventDefault();
 
-    setSelectedNote({ text: "", id: "default" });
-    buttons = <button id="note-form-submit">Submit</button>;
+    formReset();
   };
 
   const formReset = () => {
+    setSelectedNote({ text: "", id: "default" });
     document.querySelector("#note-form-text").value = "";
     buttons = <button id="note-form-submit">Submit</button>;
   };
@@ -47,6 +46,8 @@ export default function NoteForm() {
         </button>
       </>
     );
+  } else {
+    buttons = <button id="note-form-submit">Submit</button>;
   }
 
   return (
