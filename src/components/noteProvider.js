@@ -4,6 +4,7 @@ export const NoteContext = createContext();
 
 export function NoteProvider(props) {
   const [notes, setNotes] = useState([]);
+  const [selectedNote, setSelectedNote] = useState({ text: "", id: "default" });
 
   useEffect(() => {
     getNotes();
@@ -17,13 +18,13 @@ export function NoteProvider(props) {
       });
   };
 
-  const addNote = (Note) => {
+  const addNote = (note) => {
     return fetch("http://localhost:8088/notes", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(Note),
+      body: JSON.stringify(note),
     }).then(getNotes);
   };
 
@@ -33,8 +34,27 @@ export function NoteProvider(props) {
     }).then(getNotes);
   };
 
+  const updateNote = (note) => {
+    return fetch(`http://localhost:8088/notes/${note.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(note),
+    }).then(getNotes);
+  };
+
   return (
-    <NoteContext.Provider value={{ notes, addNote, deleteNote }}>
+    <NoteContext.Provider
+      value={{
+        notes,
+        selectedNote,
+        addNote,
+        deleteNote,
+        updateNote,
+        setSelectedNote,
+      }}
+    >
       {props.children}
     </NoteContext.Provider>
   );
