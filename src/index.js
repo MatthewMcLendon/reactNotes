@@ -1,20 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
-// components
-import { NoteProvider } from "./components/NoteProvider";
-import NoteList from "./components/NoteList";
-import NoteForm from "./components/NoteForm";
+// routes
+import { BrowserRouter } from "react-router-dom";
+// app
+import App from "./App";
 // style
 import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <NoteProvider>
-      <NoteForm />
-      <NoteList />
-    </NoteProvider>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 );
 
