@@ -33,8 +33,6 @@ export default function NoteForm() {
 
   const formReset = () => {
     setSelectedNote({ text: "", id: "default" });
-    document.querySelector("#note-form-text").value = "";
-    buttons = <button id="note-form-submit">Submit</button>;
   };
 
   if (selectedNote.id !== "default") {
