@@ -3,6 +3,7 @@ import Root from "./components/Routes/Root";
 import ErrorPage from "./components/Routes/ErrorPage";
 import NoteRoute from "./components/Routes/NoteRoute";
 import NavBar from "./components/Navigation/Navbar";
+import "./App.css";
 
 function App() {
   return (
