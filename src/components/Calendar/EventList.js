@@ -4,12 +4,12 @@ import Event from "./Event";
 
 export default function EventList() {
   const { events, selectedDate } = useContext(EventContext);
-  let eventList;
   const dateFormattingOptions = {
     month: "short",
     day: "numeric",
     year: "numeric",
   };
+  let eventList;
 
   if (!selectedDate) {
     eventList = events.map((event) => {

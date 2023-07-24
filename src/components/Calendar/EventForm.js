@@ -37,13 +37,28 @@ export default function EventForm() {
     document.querySelector(`#event-time`).value = "";
   };
 
-  if (selectedDate) {
+  const showEventForm = () => {
     document.querySelector("#event-form").classList.remove("hidden");
+    document.querySelector("#show-event-form").classList.add("hidden");
+  };
+
+  if (selectedDate) {
+    document.querySelector("#show-event-form").classList.remove("hidden");
     document.querySelector("#show-all-events").classList.remove("hidden");
   }
 
   return (
     <>
+      <button onClick={showEventForm} className="hidden" id="show-event-form">
+        Add new event
+      </button>
+      <button
+        onClick={clearSelectedDate}
+        className="hidden"
+        id="show-all-events"
+      >
+        Show all events
+      </button>
       <form onSubmit={submitHandler} className="hidden" id="event-form">
         <input type="hidden" />
         <div>
@@ -64,13 +79,6 @@ export default function EventForm() {
         </div>
         <button>Add event to calendar</button>
       </form>
-      <button
-        onClick={clearSelectedDate}
-        id="show-all-events"
-        className="hidden"
-      >
-        Show all events
-      </button>
     </>
   );
 }
