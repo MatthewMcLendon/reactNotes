@@ -18,12 +18,23 @@ export function EventProvider(props) {
       });
   };
 
+  const addEvent = (event) => {
+    return fetch("http://localhost:8088/events", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(event),
+    }).then(getEvents);
+  };
+
   return (
     <EventContext.Provider
       value={{
         events,
         selectedDate,
         setEvents,
+        addEvent,
         setSelectedDate,
       }}
     >
