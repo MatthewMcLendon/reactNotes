@@ -3,12 +3,22 @@ import { EventContext } from "./EventProvider";
 import Event from "./Event";
 
 export default function EventList() {
-  const { events } = useContext(EventContext);
-  return (
-    <div>
-      {events.map((event) => {
+  const { events, selectedDate } = useContext(EventContext);
+  let eventList;
+
+  if (!selectedDate) {
+    eventList = events.map((event) => {
+      return <Event event={event} key={event.id} />;
+    });
+  } else {
+    eventList = events
+      .filter((event) => {
+        return event.date === selectedDate.toString();
+      })
+      .map((event) => {
         return <Event event={event} key={event.id} />;
-      })}
-    </div>
-  );
+      });
+  }
+
+  return <div>{eventList}</div>;
 }

@@ -10,10 +10,6 @@ export function EventProvider(props) {
     getEvents();
   }, []);
 
-  useEffect(() => {
-    console.log(selectedDate);
-  }, [selectedDate]);
-
   const getEvents = () => {
     return fetch("http://localhost:8088/events")
       .then((response) => response.json())
