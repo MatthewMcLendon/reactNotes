@@ -28,6 +28,7 @@ export default function EventForm() {
     clearEventForm();
     document.querySelector("#event-form").classList.add("hidden");
     document.querySelector("#show-all-events").classList.add("hidden");
+    document.querySelector("#show-event-form").classList.add("hidden");
   };
 
   const clearEventForm = () => {

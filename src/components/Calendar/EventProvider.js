@@ -28,6 +28,12 @@ export function EventProvider(props) {
     }).then(getEvents);
   };
 
+  const deleteEvent = (id) => {
+    return fetch(`http://localhost:8088/events/${id}`, {
+      method: "DELETE",
+    }).then(getEvents);
+  };
+
   return (
     <EventContext.Provider
       value={{
@@ -35,6 +41,7 @@ export function EventProvider(props) {
         selectedDate,
         setEvents,
         addEvent,
+        deleteEvent,
         setSelectedDate,
       }}
     >
