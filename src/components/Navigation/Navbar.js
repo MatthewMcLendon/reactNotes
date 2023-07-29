@@ -15,7 +15,7 @@ export default function NavBar() {
           <Link to={"/calendar"}>Calendar</Link>
         </li>
         <li>
-          <Link to={"/users"}>Log In</Link>
+          <Link to={"/users"}>Log In or Sign up</Link>
         </li>
       </ul>
     </div>

@@ -3,7 +3,7 @@ import { EventContext } from "./EventProvider";
 import Event from "./Event";
 
 export default function EventList() {
-  const { events, selectedDate } = useContext(EventContext);
+  const { events, selectedDate, selectedEvent } = useContext(EventContext);
   const dateFormattingOptions = {
     month: "short",
     day: "numeric",
@@ -31,6 +31,10 @@ export default function EventList() {
       .map((event) => {
         return <Event event={event} key={event.id} />;
       });
+  }
+
+  if (selectedEvent) {
+    eventList = "";
   }
 
   return <div>{eventList}</div>;
