@@ -12,5 +12,28 @@
       "text": "Test ",
       "id": 6
     }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "title": "Borf's Birthday",
+      "location": "123 Real pl.",
+      "description": "Borf is turning 10!",
+      "date": "Tue Jul 25 2023 00:00:00 GMT-0500 (Central Daylight Time)"
+    },
+    {
+      "title": "Bella's vet appointment",
+      "location": "Eastside animal hospital",
+      "description": "Follow up to the yearly. ",
+      "date": "Tue Jul 25 2023 17:00:00 GMT-0500 (Central Daylight Time)",
+      "id": 2
+    },
+    {
+      "title": "test",
+      "location": "test",
+      "description": "test",
+      "date": "Fri Jul 28 2023 22:32:00 GMT-0500 (Central Daylight Time)",
+      "id": 3
+    }
   ]
 }
