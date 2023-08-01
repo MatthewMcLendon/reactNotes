@@ -34,6 +34,13 @@
       "description": "test",
       "date": "Fri Jul 28 2023 22:32:00 GMT-0500 (Central Daylight Time)",
       "id": 3
+    },
+    {
+      "title": "Learn async promise",
+      "location": "home",
+      "description": "Finally learn to do the thing. ",
+      "date": "Tue Aug 01 2023 14:05:00 GMT-0500 (Central Daylight Time)",
+      "id": 4
     }
   ]
 }

@@ -68,15 +68,11 @@ export default function EventForm() {
 
   const showEventForm = async () => {
     setFormVisible(true);
+    return;
   };
 
   const populateForm = async () => {
-    let makeForm = new Promise((resolve, reject) => {
-      setFormVisible(true);
-      resolve();
-    });
-
-    await makeForm;
+    await showEventForm();
 
     let time = new Date(selectedEvent.date).toLocaleTimeString("it-US");
 
