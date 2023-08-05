@@ -4,6 +4,21 @@
       "id": 1,
       "username": "admin",
       "password": "password"
+    },
+    {
+      "username": "test",
+      "password": "test",
+      "id": 2
+    },
+    {
+      "username": "test2",
+      "password": "test",
+      "id": 3
+    },
+    {
+      "username": "test3",
+      "password": "test",
+      "id": 4
     }
   ],
   "notes": [

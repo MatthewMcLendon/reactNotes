@@ -1,17 +1,28 @@
 import UserForm from "./UserForm";
+import { useNavigate } from "react-router-dom";
 
-export default function UserProvider(props) {
-  //   Get, post, delete, update routes. Provide to form. Notes and calendar will sort by logged in user.
-  //   Logged in user saved to local storage. On logout, clear local storage.
-
-  //   Post route: add new user to database, set local storage logged in.
+export default function UserProvider() {
+  const navigate = useNavigate();
 
   const logInUser = (user) => {
     localStorage.setItem("user", user.id);
+    navigate("/");
   };
 
   const logOutUser = () => {
     localStorage.removeItem("user");
+  };
+
+  const getUser = (user) => {
+    return fetch(`http://localhost:8088/users/`)
+      .then((response) => response.json())
+      .then((response) =>
+        response.find(
+          (element) =>
+            element.password === user.password &&
+            element.username === user.username
+        )
+      );
   };
 
   const addUser = (user) => {
@@ -24,5 +35,5 @@ export default function UserProvider(props) {
     }).then(logInUser(user));
   };
 
-  return <UserForm addUser={addUser} />;
+  return <UserForm addUser={addUser} getUser={getUser} logInUser={logInUser} />;
 }
