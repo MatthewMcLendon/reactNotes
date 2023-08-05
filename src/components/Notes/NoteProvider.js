@@ -17,7 +17,6 @@ export function NoteProvider(props) {
       .then((response) => response.filter((note) => note.user === userId))
       .then((response) => {
         setNotes(response);
-        console.log(notes, userId, response);
       });
   };
 

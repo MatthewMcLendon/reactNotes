@@ -35,6 +35,7 @@ export default function EventForm() {
       location: document.querySelector("#event-location").value,
       description: document.querySelector("#event-description").value,
       date: dateFormatter(),
+      user: parseInt(localStorage.getItem("user")),
     };
 
     addEvent(newEvent).then(clearSelectedDate);

@@ -12,8 +12,10 @@ export function EventProvider(props) {
   }, []);
 
   const getEvents = () => {
+    const userId = parseInt(localStorage.getItem("user"));
     return fetch("http://localhost:8088/events")
       .then((response) => response.json())
+      .then((response) => response.filter((event) => event.user === userId))
       .then((response) => {
         setEvents(response);
       });
