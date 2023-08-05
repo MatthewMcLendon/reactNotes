@@ -1,22 +1,39 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function NavBar() {
-  // const [isLoggedIn, setIsLoggedIn] = useState();
-  // const user = localStorage.getItem("user");
+  const [isLoggedIn, setIsLoggedIn] = useState();
+  const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   if (user) {
-  //     setIsLoggedIn(true);
-  //   } else {
-  //     logOutUser();
-  //   }
-  // }, [user]);
+  useEffect(() => {
+    const user = localStorage.getItem("user");
+    user ? setIsLoggedIn(true) : logOutUser();
 
-  // const logOutUser = () => {
-  //   localStorage.clear();
-  //   setIsLoggedIn(false);
-  // };
+    window.addEventListener("userLogin", () => {
+      setIsLoggedIn(true);
+    });
+  }, []);
+
+  const logOutUser = () => {
+    localStorage.clear();
+    setIsLoggedIn(false);
+    navigate("/");
+  };
+
+  const loggedInView = (
+    <>
+      <li>
+        <Link to={"/notes"}>Notes</Link>
+      </li>
+      <li>
+        <Link to={"/calendar"}>Calendar</Link>
+      </li>
+      <li>
+        <button onClick={logOutUser}>Logout</button>
+      </li>
+    </>
+  );
 
   return (
     <nav>
@@ -25,19 +42,13 @@ export default function NavBar() {
         <li>
           <Link to={"/"}>Home</Link>
         </li>
-        <li>
-          <Link to={"/notes"}>Notes</Link>
-        </li>
-        <li>
-          <Link to={"/calendar"}>Calendar</Link>
-        </li>
-        <li>
-          {/* {isLoggedIn ? (
-            <button onClick={logOutUser}>Logout</button>
-          ) : ( */}
-          <Link to={"/users"}>Log In or Sign up</Link>
-          {/* )} */}
-        </li>
+        {isLoggedIn ? (
+          loggedInView
+        ) : (
+          <li>
+            <Link to={"/users"}>Log In or Sign up</Link>
+          </li>
+        )}
       </ul>
     </nav>
   );

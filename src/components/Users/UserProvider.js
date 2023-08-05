@@ -6,12 +6,13 @@ export default function UserProvider() {
 
   const logInUser = (user) => {
     localStorage.setItem("user", user.id);
+    window.dispatchEvent(new Event("userLogin"));
     navigate("/");
   };
 
-  const logOutUser = () => {
-    localStorage.removeItem("user");
-  };
+  // const logOutUser = () => {
+  //   localStorage.removeItem("user");
+  // };
 
   const getUser = (user) => {
     return fetch(`http://localhost:8088/users/`)

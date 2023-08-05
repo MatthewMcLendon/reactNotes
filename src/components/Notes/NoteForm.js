@@ -19,6 +19,7 @@ export default function NoteForm() {
     } else {
       const newNote = {
         text: document.querySelector("#note-form-text").value,
+        user: parseInt(localStorage.getItem("user")),
       };
 
       addNote(newNote).then(formReset);

@@ -11,10 +11,13 @@ export function NoteProvider(props) {
   }, []);
 
   const getNotes = () => {
+    const userId = parseInt(localStorage.getItem("user"));
     return fetch("http://localhost:8088/notes")
       .then((response) => response.json())
+      .then((response) => response.filter((note) => note.user === userId))
       .then((response) => {
         setNotes(response);
+        console.log(notes, userId, response);
       });
   };
 
