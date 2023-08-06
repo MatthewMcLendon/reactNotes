@@ -1,46 +1,57 @@
 {
-  "notes": [
+  "users": [
     {
       "id": 1,
-      "text": "This is the default note"
+      "username": "admin",
+      "password": "password"
     },
     {
-      "id": 2,
-      "text": "This is the other default note"
+      "username": "test",
+      "password": "test",
+      "id": 2
+    }
+  ],
+  "notes": [
+    {
+      "text": "this is a test",
+      "user": 1,
+      "id": 1
     },
     {
-      "text": "Test ",
-      "id": 6
+      "text": "Note user: test",
+      "user": 2,
+      "id": 2
+    },
+    {
+      "text": "this is another test",
+      "user": 1,
+      "id": 3
     }
   ],
   "events": [
     {
-      "id": 1,
-      "title": "Borf's Birthday",
-      "location": "123 Real pl.",
-      "description": "Borf is turning 10!",
-      "date": "Tue Jul 25 2023 00:00:00 GMT-0500 (Central Daylight Time)"
+      "title": "Test admin event",
+      "location": "test",
+      "description": "test",
+      "date": "Sat Aug 05 2023 15:15:00 GMT-0500 (Central Daylight Time)",
+      "user": 1,
+      "id": 1
     },
     {
-      "title": "Bella's vet appointment",
-      "location": "Eastside animal hospital",
-      "description": "Follow up to the yearly. ",
-      "date": "Tue Jul 25 2023 17:00:00 GMT-0500 (Central Daylight Time)",
+      "title": "User Test event",
+      "location": "test",
+      "description": "test",
+      "date": "Sat Aug 05 2023 15:18:00 GMT-0500 (Central Daylight Time)",
+      "user": 2,
       "id": 2
     },
     {
-      "title": "test",
+      "title": "Admin event",
       "location": "test",
       "description": "test",
-      "date": "Fri Jul 28 2023 22:32:00 GMT-0500 (Central Daylight Time)",
+      "date": "Sun Aug 06 2023 15:19:00 GMT-0500 (Central Daylight Time)",
+      "user": 1,
       "id": 3
-    },
-    {
-      "title": "Learn async promise",
-      "location": "home",
-      "description": "Finally learn to do the thing. ",
-      "date": "Tue Aug 01 2023 14:05:00 GMT-0500 (Central Daylight Time)",
-      "id": 4
     }
   ]
 }
