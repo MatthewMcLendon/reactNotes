@@ -1,3 +1,3 @@
 export default function Root() {
-  return <div>Welcome to note app!</div>;
+  return <main>Welcome to note app!</main>;
 }

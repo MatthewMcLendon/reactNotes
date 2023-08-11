@@ -1,5 +1,6 @@
 import { useContext, useEffect } from "react";
 import { NoteContext } from "./NoteProvider";
+import "./NoteForm.module.css"
 
 export default function NoteForm() {
   const { addNote, updateNote, selectedNote, setSelectedNote } =
@@ -50,7 +51,7 @@ export default function NoteForm() {
   }
 
   return (
-    <form onSubmit={submitHandler}>
+    <form onSubmit={submitHandler} className="secondary card">
       <label htmlFor="note-form-text">Note: </label>
       <input type="text" id="note-form-text" required />
       <input type="hidden" id="id" />

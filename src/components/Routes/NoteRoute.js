@@ -4,9 +4,11 @@ import NoteList from "../Notes/NoteList";
 
 export default function NoteRoute() {
   return (
-    <NoteProvider>
-      <NoteForm />
-      <NoteList />
-    </NoteProvider>
+    <main>
+      <NoteProvider>
+        <NoteForm />
+        <NoteList />
+      </NoteProvider>
+    </main>
   );
 }

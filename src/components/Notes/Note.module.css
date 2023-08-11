@@ -1,0 +1,8 @@
+.note-card {
+  flex: 0 0 33.33%;
+}
+
+p {
+  margin: 1rem;
+  padding: 0.5rem;
+}

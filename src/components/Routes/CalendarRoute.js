@@ -5,10 +5,12 @@ import EventForm from "../Calendar/EventForm";
 
 export default function CalendarRoute() {
   return (
-    <EventProvider>
-      <CalendarComponent />
-      <EventForm />
-      <EventList />
-    </EventProvider>
+    <main>
+      <EventProvider>
+        <CalendarComponent />
+        <EventForm />
+        <EventList />
+      </EventProvider>
+    </main>
   );
 }

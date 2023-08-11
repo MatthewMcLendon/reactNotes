@@ -1,0 +1,12 @@
+form {
+  margin: auto;
+  padding: 2rem;
+  width: 50%;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  form {
+    width: 90%;
+  }
+}

@@ -26,6 +26,46 @@
       "text": "this is another test",
       "user": 1,
       "id": 3
+    },
+    {
+      "text": "test",
+      "user": 1,
+      "id": 4
+    },
+    {
+      "text": "test",
+      "user": 1,
+      "id": 5
+    },
+    {
+      "text": "test",
+      "user": 1,
+      "id": 6
+    },
+    {
+      "text": "This is a really long test to see if the note will expand to fit all of this text. ",
+      "user": 1,
+      "id": 7
+    },
+    {
+      "text": "This is another long test to see if the notes will shift. ",
+      "user": 1,
+      "id": 8
+    },
+    {
+      "text": "test",
+      "user": 1,
+      "id": 9
+    },
+    {
+      "text": "test",
+      "user": 1,
+      "id": 10
+    },
+    {
+      "text": "Is there a better way to organize these notes?",
+      "user": 1,
+      "id": 11
     }
   ],
   "events": [
