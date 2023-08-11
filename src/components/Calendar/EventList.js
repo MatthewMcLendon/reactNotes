@@ -37,7 +37,7 @@ export default function EventList() {
     eventList = "";
   }
 
-  return <div>{eventList}</div>;
+  return <div className="flex flex-wrap">{eventList}</div>;
 }
 
 // Continue here. How do I want to list events? Currently filtering by selected day but default list uses latest first. Group by day/week/month?

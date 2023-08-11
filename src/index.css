@@ -25,11 +25,18 @@ darkmode accent: #9db0c8;
 
 /* formatting */
 
-.flex {
+.flex-row {
   display: flex;
   justify-content: space-around;
   gap: 1rem;
   margin: 1rem;
+}
+
+.flex-column {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem;
+  flex-direction: column;
 }
 
 .flex-wrap {
@@ -38,6 +45,11 @@ darkmode accent: #9db0c8;
 
 .align-center {
   align-items: center;
+}
+
+.center {
+  align-content: center;
+  margin: 0px;
 }
 
 .card {

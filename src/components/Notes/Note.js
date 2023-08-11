@@ -14,7 +14,7 @@ export default function Note({ note }) {
   };
 
   return (
-    <div className="card secondary note-card">
+    <div className="card secondary">
       <p>{note.text}</p>
       <button onClick={deleteHandeler}>Delete</button>
       <button onClick={updateHandler}>Update</button>

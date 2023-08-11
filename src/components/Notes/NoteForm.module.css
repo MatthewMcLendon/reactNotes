@@ -2,7 +2,11 @@ form {
   margin: auto;
   padding: 2rem;
   width: 50%;
-  text-align: center;
+  text-align: left;
+}
+
+input {
+  width: 55%;
 }
 
 @media (max-width: 900px) {

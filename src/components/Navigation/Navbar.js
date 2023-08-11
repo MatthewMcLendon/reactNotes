@@ -37,7 +37,7 @@ export default function NavBar() {
 
   return (
     <nav>
-      <ul className="flex align-center">
+      <ul className="flex-row align-center">
         <li>
           <h2>Planner</h2>
         </li>

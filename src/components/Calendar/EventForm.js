@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { EventContext } from "./EventProvider";
+import "./EventForm.module.css"
 
 export default function EventForm() {
   const {
@@ -103,7 +104,11 @@ export default function EventForm() {
         </>
       )}
       {formVisible && (
-        <form onSubmit={submitHandler} id="event-form">
+        <form
+          onSubmit={submitHandler}
+          id="event-form"
+          className="card secondary"
+        >
           <input type="hidden" />
           <div>
             <label htmlFor="event-title">Event name: </label>

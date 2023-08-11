@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { EventContext } from "./EventProvider";
+import "./Event.module.css";
 
 export default function Event({ event }) {
   const { deleteEvent, setSelectedEvent, setSelectedDate } =
@@ -27,7 +28,7 @@ export default function Event({ event }) {
   };
 
   return (
-    <div>
+    <div className="card secondary">
       <h2>{event.title}</h2>
       <p>{event.description}</p>
       <p>{event.location}</p>

@@ -6,7 +6,7 @@ export default function NoteList() {
   const { notes } = useContext(NoteContext);
 
   return (
-    <div className="note-list flex flex-wrap">
+    <div className="flex-column flex-wrap">
       {notes.map((note) => {
         return <Note note={note} key={note.id} />;
       })}
