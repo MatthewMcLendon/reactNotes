@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { NoteContext } from "./NoteProvider";
-import "./Note.module.css";
+import "./Note.css";
 
 export default function Note({ note }) {
   const { deleteNote, setSelectedNote } = useContext(NoteContext);

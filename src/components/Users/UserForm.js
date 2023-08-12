@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./UserForm.css";
 
 export default function UserForm({ addUser, getUser, logInUser }) {
   let [error, setError] = useState();
@@ -61,23 +62,23 @@ export default function UserForm({ addUser, getUser, logInUser }) {
   };
 
   return (
-    <>
-      <form onSubmit={handleSubmit}>
+    <div className="form-container">
+      <form onSubmit={handleSubmit} className="card secondary">
         <input type="hidden" />
-        <fieldset>
+        <span>
           <label htmlFor="username">Username: </label>
           <input type="text" id="username" required />
-        </fieldset>
-        <fieldset>
+        </span>
+        <span>
           <label htmlFor="password">Password: </label>
           <input type="password" id="password" required />
-        </fieldset>
-        <fieldset>
+        </span>
+        <span>
           <button onClick={handleSignUp}>Sign up</button>
           <button onClick={handleLogIn}>Log in</button>
-        </fieldset>
+        </span>
       </form>
       <p>{error}</p>
-    </>
+    </div>
   );
 }

@@ -3,6 +3,9 @@ form {
   padding: 2rem;
   width: 50%;
   text-align: left;
+  text-justify: center;
+  display: flex;
+  flex-direction: row;
 }
 
 input {

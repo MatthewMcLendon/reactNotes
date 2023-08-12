@@ -1,0 +1,15 @@
+.form-container {
+  align-content: center;
+  margin: auto;
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+span {
+  text-align: center;
+  padding: 2%;
+}

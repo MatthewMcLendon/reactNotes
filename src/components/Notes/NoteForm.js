@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react";
 import { NoteContext } from "./NoteProvider";
-import "./NoteForm.module.css"
+import "./NoteForm.css";
 
 export default function NoteForm() {
   const { addNote, updateNote, selectedNote, setSelectedNote } =
