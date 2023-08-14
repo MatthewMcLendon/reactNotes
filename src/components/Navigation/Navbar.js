@@ -30,17 +30,16 @@ export default function NavBar() {
         <Link to={"/calendar"}>Calendar</Link>
       </li>
       <li>
-        <button onClick={logOutUser}>Logout</button>
+        <p onClick={logOutUser}>Logout</p>
       </li>
     </>
   );
 
   return (
     <nav>
-      <h2>Planner</h2>
-      <ul>
+      <ul className="flex-row align-center">
         <li>
-          <Link to={"/"}>Home</Link>
+          <h2>Planner</h2>
         </li>
         {isLoggedIn ? (
           loggedInView

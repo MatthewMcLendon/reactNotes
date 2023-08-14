@@ -1,3 +1,9 @@
+import HomePage from "../Navigation/HomePage";
+
 export default function Root() {
-  return <div>Welcome to note app!</div>;
+  return (
+    <main>
+      <HomePage />
+    </main>
+  );
 }

@@ -1,0 +1,12 @@
+.note-form {
+  display: inline;
+  margin: auto;
+  padding: 2rem;
+  width: 80%;
+}
+
+@media (max-width: 900px) {
+  form {
+    width: 100%;
+  }
+}

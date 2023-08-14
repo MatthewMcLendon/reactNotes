@@ -1,0 +1,14 @@
+.note-card {
+  margin: auto;
+  width: 80%;
+}
+
+.note-text {
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .note-card {
+    width: 100%;
+  }
+}
