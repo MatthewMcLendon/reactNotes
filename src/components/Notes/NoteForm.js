@@ -51,7 +51,7 @@ export default function NoteForm() {
   }
 
   return (
-    <form onSubmit={submitHandler} className="secondary card">
+    <form onSubmit={submitHandler} className="secondary card note-form">
       <label htmlFor="note-form-text">Note: </label>
       <input type="text" id="note-form-text" required />
       <input type="hidden" id="id" />

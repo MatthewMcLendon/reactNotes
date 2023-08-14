@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { EventContext } from "./EventProvider";
-import "./EventForm.module.css"
+import "./EventForm.css";
 
 export default function EventForm() {
   const {

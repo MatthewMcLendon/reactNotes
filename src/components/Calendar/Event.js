@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { EventContext } from "./EventProvider";
-import "./Event.module.css";
+import "./Event.css";
 
 export default function Event({ event }) {
   const { deleteEvent, setSelectedEvent, setSelectedDate } =

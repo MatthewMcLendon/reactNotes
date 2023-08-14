@@ -1,0 +1,13 @@
+input {
+  margin: 0.5rem;
+  padding: 0.25rem;
+}
+
+form button {
+  align-self: center;
+  width: fit-content;
+}
+
+form {
+  padding: 1rem;
+}
